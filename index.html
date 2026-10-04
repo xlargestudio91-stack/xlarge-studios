@@ -379,6 +379,47 @@
             }
         }
 
+   /* GÜNCELLEMELER */
+
+.updates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.update-card {
+    background: #121219;
+    border: 1px solid #252532;
+    border-radius: 15px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.update-card:hover {
+    transform: translateY(-6px);
+    border-color: #6855ff;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+.update-date {
+    display: inline-block;
+    color: #8d7aff;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.update-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.update-content p {
+    color: #777;
+    line-height: 1.6;
+}     
+        
     </style>
 </head>
 
@@ -390,10 +431,11 @@
         XLARGE <span>STUDIOS</span>
     </div>
 
-    <nav>
-        <a href="#games">Oyunlar</a>
-        <a href="#about">Hakkımızda</a>
-    </nav>
+  <nav>
+    <a href="#games">Oyunlar</a>
+    <a href="#updates">Güncellemeler</a>
+    <a href="#about">Hakkımızda</a>
+</nav>
 
 </header>
 
@@ -536,7 +578,89 @@
 
 </section>
 
+<!-- GÜNCELLEMELER -->
 
+<section id="updates">
+
+    <h2 class="section-title">
+        Güncellemeler
+    </h2>
+
+    <p class="section-subtitle">
+        XLarge Studios'dan son gelişmeler.
+    </p>
+
+    <div class="updates">
+
+        <div class="update-card">
+
+            <div class="update-date">
+                2026
+            </div>
+
+            <div class="update-content">
+
+                <h3>
+                    XLarge Studios Açıldı
+                </h3>
+
+                <p>
+                    XLarge Studios resmi olarak kuruldu.
+                    Yeni oyun projelerimiz için
+                    çalışmalara başladık.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="update-card">
+
+            <div class="update-date">
+                YAKINDA
+            </div>
+
+            <div class="update-content">
+
+                <h3>
+                    İlk Projenin Geliştirilmesi
+                </h3>
+
+                <p>
+                    İlk büyük oyun projemizin
+                    geliştirme süreci devam ediyor.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="update-card">
+
+            <div class="update-date">
+                YAKINDA
+            </div>
+
+            <div class="update-content">
+
+                <h3>
+                    İlk Oynanış Görüntüleri
+                </h3>
+
+                <p>
+                    Oyunumuzdan ilk görüntüleri
+                    sizlerle paylaşacağız.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 <!-- HAKKIMIZDA -->
 
 <section id="about" class="about">
