@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>XLarge Studios</title>
 
+    <meta name="description"
+          content="XLarge Studios - Yeni nesil oyun deneyimleri.">
+
     <style>
+
+        /* =========================
+           GENEL
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -18,118 +30,239 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             background: #08080c;
-            color: white;
+            color: #ffffff;
+
             overflow-x: hidden;
         }
 
-        /* ÜST MENÜ */
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           ÜST MENÜ
+        ========================= */
 
         header {
+
             position: fixed;
+
             top: 0;
             left: 0;
+
             width: 100%;
             height: 72px;
 
             display: flex;
+
             align-items: center;
             justify-content: space-between;
 
             padding: 0 7%;
 
-            background: rgba(8, 8, 12, 0.85);
-            backdrop-filter: blur(12px);
+            background:
+                rgba(8, 8, 12, 0.82);
 
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            backdrop-filter:
+                blur(15px);
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.08);
 
             z-index: 1000;
         }
 
+
         .logo {
+
             font-size: 23px;
+
             font-weight: 900;
+
             letter-spacing: 2px;
+
+            color: #ffffff;
         }
 
+
         .logo span {
+
             color: #7c5cff;
         }
 
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+        }
+
+
         nav a {
-            color: #aaa;
-            text-decoration: none;
-            margin-left: 30px;
+
+            color: #999;
+
+            margin-left: 28px;
+
             font-size: 14px;
+
             transition: 0.25s;
         }
 
+
         nav a:hover {
-            color: white;
+
+            color: #ffffff;
         }
 
-        /* ANA SAYFA */
+
+        /* =========================
+           ANA SAYFA
+        ========================= */
 
         .hero {
+
             min-height: 100vh;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
             text-align: center;
 
-            padding: 120px 20px 80px;
+            padding:
+                130px 20px
+                80px;
 
             position: relative;
+
             overflow: hidden;
 
             background:
+
                 radial-gradient(
                     circle at 50% 35%,
                     #30256b 0%,
                     #111126 25%,
-                    #08080c 65%
+                    #08080c 68%
                 );
         }
 
+
         .hero::before {
+
             content: "";
 
             position: absolute;
 
-            width: 500px;
-            height: 500px;
+            width: 550px;
+            height: 550px;
 
             background: #7c5cff;
+
             opacity: 0.12;
 
-            filter: blur(120px);
+            filter:
+                blur(130px);
 
             border-radius: 50%;
 
-            top: 20%;
+            top: 15%;
             left: 50%;
 
-            transform: translateX(-50%);
+            transform:
+                translateX(-50%);
+
+            animation:
+                glow 5s ease-in-out infinite;
         }
+
+
+        @keyframes glow {
+
+            0% {
+                transform:
+                    translateX(-50%)
+                    scale(1);
+            }
+
+            50% {
+                transform:
+                    translateX(-50%)
+                    scale(1.15);
+            }
+
+            100% {
+                transform:
+                    translateX(-50%)
+                    scale(1);
+            }
+        }
+
 
         .hero-content {
+
             position: relative;
+
             z-index: 2;
+
+            animation:
+                heroAppear 1s ease;
         }
 
+
+        @keyframes heroAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(25px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
         .small-title {
+
             color: #8d7aff;
-            font-size: 14px;
+
+            font-size: 13px;
+
             font-weight: bold;
+
             letter-spacing: 4px;
+
             margin-bottom: 20px;
         }
 
+
         .hero h1 {
-            font-size: clamp(60px, 12vw, 150px);
+
+            font-size:
+                clamp(
+                    60px,
+                    12vw,
+                    150px
+                );
 
             font-weight: 900;
 
@@ -137,30 +270,45 @@
 
             line-height: 0.9;
 
-            background: linear-gradient(
-                90deg,
-                #ffffff,
-                #9b8cff
-            );
+            background:
 
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #9b8cff
+                );
+
+            -webkit-background-clip:
+                text;
+
+            -webkit-text-fill-color:
+                transparent;
         }
 
+
         .hero h2 {
-            margin-top: 20px;
 
-            font-size: clamp(20px, 3vw, 32px);
+            margin-top: 25px;
 
-            color: #ddd;
+            font-size:
+                clamp(
+                    20px,
+                    3vw,
+                    32px
+                );
+
+            color: #dddddd;
 
             font-weight: 500;
         }
 
-        .hero p {
-            margin: 18px auto 0;
 
-            max-width: 600px;
+        .hero p {
+
+            margin:
+                20px auto 0;
+
+            max-width: 620px;
 
             color: #888;
 
@@ -169,117 +317,193 @@
             line-height: 1.7;
         }
 
-        /* BUTONLAR */
+
+        /* =========================
+           BUTONLAR
+        ========================= */
 
         .buttons {
+
             margin-top: 35px;
         }
 
+
         .button {
+
             display: inline-block;
 
-            padding: 15px 28px;
+            padding:
+                15px 28px;
 
             margin: 5px;
 
             border-radius: 9px;
 
-            text-decoration: none;
-
             font-weight: bold;
 
-            transition: 0.25s;
+            transition:
+                0.25s;
+
+            cursor: pointer;
         }
 
+
         .primary {
+
             background: #6855ff;
+
             color: white;
 
             box-shadow:
-                0 0 25px rgba(104,85,255,0.25);
+                0 0 30px
+                rgba(
+                    104,
+                    85,
+                    255,
+                    0.25
+                );
         }
+
 
         .primary:hover {
-            transform: translateY(-3px);
+
             background: #7968ff;
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 10px 30px
+                rgba(
+                    104,
+                    85,
+                    255,
+                    0.3
+                );
         }
 
+
         .secondary {
-            border: 1px solid #333344;
+
+            border:
+                1px solid #333344;
 
             color: #ddd;
 
-            background: rgba(255,255,255,0.03);
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.03
+                );
         }
+
 
         .secondary:hover {
-            border-color: #6855ff;
-            transform: translateY(-3px);
+
+            border-color:
+                #6855ff;
+
+            transform:
+                translateY(-4px);
         }
 
-        /* BÖLÜMLER */
+
+        /* =========================
+           BÖLÜMLER
+        ========================= */
 
         section {
-            padding: 100px 7%;
+
+            padding:
+                100px 7%;
         }
 
+
         .section-title {
+
             font-size: 38px;
+
             margin-bottom: 12px;
         }
 
+
         .section-subtitle {
+
             color: #777;
+
             margin-bottom: 40px;
+
+            line-height: 1.6;
         }
 
-        /* OYUNLAR */
+
+        /* =========================
+           OYUNLAR
+        ========================= */
 
         .games {
+
             display: grid;
 
             grid-template-columns:
-                repeat(auto-fit, minmax(270px, 1fr));
+                repeat(
+                    auto-fit,
+                    minmax(270px, 1fr)
+                );
 
             gap: 25px;
         }
 
+
         .game-card {
+
             background: #121219;
 
-            border: 1px solid #252532;
+            border:
+                1px solid #252532;
 
             border-radius: 15px;
 
             overflow: hidden;
 
-            transition: 0.3s;
-
-            cursor: pointer;
+            transition:
+                0.3s;
         }
+
 
         .game-card:hover {
-            transform: translateY(-8px);
 
-            border-color: #6855ff;
+            transform:
+                translateY(-8px);
+
+            border-color:
+                #6855ff;
 
             box-shadow:
-                0 15px 40px rgba(0,0,0,0.4);
+                0 20px 45px
+                rgba(0,0,0,0.4);
         }
 
+
         .game-image {
+
             height: 190px;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
-            font-size: 28px;
+            font-size: 27px;
+
             font-weight: 900;
 
             letter-spacing: 2px;
 
             background:
+
                 linear-gradient(
                     135deg,
                     #5b4be7,
@@ -287,226 +511,526 @@
                 );
         }
 
+
         .game-info {
+
             padding: 23px;
         }
 
+
         .game-info h3 {
+
             font-size: 21px;
         }
 
+
         .game-info p {
+
             color: #777;
 
-            margin-top: 9px;
+            margin-top: 10px;
 
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
+
         .status {
+
             display: inline-block;
 
             margin-top: 17px;
 
-            padding: 6px 10px;
+            padding:
+                7px 11px;
 
             border-radius: 6px;
 
-            background: rgba(255,255,255,0.06);
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.06
+                );
 
             color: #aaa;
 
-            font-size: 12px;
+            font-size: 11px;
+
+            font-weight: bold;
         }
 
-        /* HAKKIMIZDA */
 
-        .about {
-            background: #0d0d13;
+        /* =========================
+           GÜNCELLEMELER
+        ========================= */
+
+        .updates {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(280px, 1fr)
+                );
+
+            gap: 25px;
         }
 
-        .about-box {
+
+        .update-card {
+
+            background: #121219;
+
+            border:
+                1px solid #252532;
+
+            border-radius: 15px;
+
+            padding: 27px;
+
+            transition:
+                0.3s;
+        }
+
+
+        .update-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            border-color:
+                #6855ff;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0,0,0,0.35);
+        }
+
+
+        .update-date {
+
+            color: #8d7aff;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .update-content h3 {
+
+            font-size: 20px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .update-content p {
+
+            color: #777;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           TOPLULUK
+        ========================= */
+
+        .community {
+
+            background: #0b0b10;
+        }
+
+
+        .community-box {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(280px, 1fr)
+                );
+
+            gap: 25px;
+
             max-width: 850px;
         }
 
-        .about-box p {
+
+        .community-item {
+
+            background: #121219;
+
+            border:
+                1px solid #252532;
+
+            border-radius: 15px;
+
+            padding: 35px;
+
+            text-align: center;
+
+            transition:
+                0.3s;
+        }
+
+
+        .community-item:hover {
+
+            transform:
+                translateY(-7px);
+
+            border-color:
+                #6855ff;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0,0,0,0.35);
+        }
+
+
+        .community-icon {
+
+            font-size: 42px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .community-item h3 {
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .community-item p {
+
+            color: #777;
+
+            line-height: 1.6;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           HAKKIMIZDA
+        ========================= */
+
+        .about {
+
+            background: #0d0d13;
+        }
+
+
+        .about-container {
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+
+        .about-text {
+
+            max-width: 700px;
+        }
+
+
+        .about-text p {
+
             color: #999;
 
             font-size: 17px;
 
             line-height: 1.8;
+
+            margin-top: 20px;
         }
 
-        /* ALT KISIM */
+
+        .about-stats {
+
+            display: grid;
+
+            gap: 15px;
+        }
+
+
+        .stat-card {
+
+            background: #121219;
+
+            border:
+                1px solid #252532;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            transition:
+                0.3s;
+        }
+
+
+        .stat-card:hover {
+
+            transform:
+                translateX(6px);
+
+            border-color:
+                #6855ff;
+        }
+
+
+        .stat-card strong {
+
+            font-size: 35px;
+
+            color: #8d7aff;
+        }
+
+
+        .stat-card span {
+
+            color: #777;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           ALT BİLGİ
+        ========================= */
 
         footer {
-            padding: 35px 7%;
+
+            padding:
+                40px 7%;
 
             text-align: center;
 
             color: #555;
 
-            border-top: 1px solid #1e1e27;
+            border-top:
+                1px solid #1e1e27;
         }
 
-        /* TELEFON */
+
+        footer strong {
+
+            color: #777;
+        }
+
+
+        /* =========================
+           TELEFON
+        ========================= */
 
         @media (max-width: 700px) {
 
             header {
-                padding: 0 5%;
+
+                height: 65px;
+
+                padding:
+                    0 5%;
             }
+
 
             .logo {
-                font-size: 18px;
+
+                font-size: 17px;
+
+                letter-spacing: 1px;
             }
+
 
             nav a {
-                margin-left: 12px;
-                font-size: 12px;
+
+                margin-left: 10px;
+
+                font-size: 11px;
             }
+
+
+            .hero {
+
+                padding:
+                    110px 20px 70px;
+            }
+
 
             .hero h1 {
-                letter-spacing: -4px;
+
+                letter-spacing:
+                    -4px;
             }
+
+
+            .hero h2 {
+
+                line-height: 1.4;
+            }
+
 
             section {
-                padding: 75px 5%;
+
+                padding:
+                    75px 5%;
             }
+
 
             .section-title {
+
                 font-size: 30px;
             }
+
+
+            .about-container {
+
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+
+            .about-text p {
+
+                font-size: 15px;
+            }
+
+
+            .game-image {
+
+                height: 170px;
+            }
+
         }
 
-   /* GÜNCELLEMELER */
-
-.updates {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.update-card {
-    background: #121219;
-    border: 1px solid #252532;
-    border-radius: 15px;
-    padding: 25px;
-    transition: 0.3s;
-}
-
-.update-card:hover {
-    transform: translateY(-6px);
-    border-color: #6855ff;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
-}
-
-.update-date {
-    display: inline-block;
-    color: #8d7aff;
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-}
-
-.update-content h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.update-content p {
-    color: #777;
-    line-height: 1.6;
-}     
-    /* TOPLULUK */
-
-.community-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    max-width: 800px;
-}
-
-.community-item {
-    background: #121219;
-    border: 1px solid #252532;
-    border-radius: 15px;
-    padding: 35px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.community-item:hover {
-    transform: translateY(-6px);
-    border-color: #6855ff;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
-}
-
-.community-icon {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-.community-item h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.community-item p {
-    color: #777;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}    
     </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     ÜST MENÜ
+========================= -->
 
 <header>
 
     <div class="logo">
-        XLARGE <span>STUDIOS</span>
+
+        XLARGE
+        <span>STUDIOS</span>
+
     </div>
 
-<nav>
-    <a href="#games">Oyunlar</a>
-    <a href="#updates">Güncellemeler</a>
-    <a href="#community">Topluluk</a>
-    <a href="#about">Hakkımızda</a>
-</nav>
+
+    <nav>
+
+        <a href="#games">
+            Oyunlar
+        </a>
+
+        <a href="#updates">
+            Güncellemeler
+        </a>
+
+        <a href="#community">
+            Topluluk
+        </a>
+
+        <a href="#about">
+            Hakkımızda
+        </a>
+
+    </nav>
 
 </header>
 
 
-<!-- ANA SAYFA -->
+
+<!-- =========================
+     ANA SAYFA
+========================= -->
 
 <section class="hero">
 
     <div class="hero-content">
 
         <div class="small-title">
+
             XLARGE STUDIOS
+
         </div>
 
-        <h1>XLARGE</h1>
 
-        <h2>Daha Büyük Düşün. Sınırların Ötesinde Oyna.</h2>
+        <h1>
+
+            XLARGE
+
+        </h1>
+
+
+        <h2>
+
+            Daha Büyük Düşün.
+            Sınırların Ötesinde Oyna.
+
+        </h2>
+
 
         <p>
+
             Oyuncuları bir araya getiren,
-            özgün ve unutulmaz oyun deneyimleri
-            oluşturuyoruz.
+            özgün ve unutulmaz oyun
+            deneyimleri oluşturuyoruz.
+
         </p>
+
 
         <div class="buttons">
 
-            <a href="#games" class="button primary">
+            <a
+                href="#games"
+                class="button primary">
+
                 Oyunları Keşfet
+
             </a>
 
-            <a href="#about" class="button secondary">
+
+            <a
+                href="#about"
+                class="button secondary">
+
                 Bizi Tanıyın
+
             </a>
 
         </div>
@@ -516,137 +1040,203 @@
 </section>
 
 
-<!-- OYUNLAR -->
+
+<!-- =========================
+     OYUNLAR
+========================= -->
 
 <section id="games">
 
     <h2 class="section-title">
+
         Oyunlarımız
+
     </h2>
 
+
     <p class="section-subtitle">
-        Büyük projeler yolda.
+
+        XLarge Studios tarafından
+        geliştirilen ve geliştirilecek
+        projeler.
+
     </p>
 
-   <div class="games">
 
-    <!-- OYUN 1 -->
+    <div class="games">
 
-    <div class="game-card">
 
-        <div class="game-image">
-            PROJE X
+        <div class="game-card">
+
+            <div class="game-image">
+
+                PROJE X
+
+            </div>
+
+
+            <div class="game-info">
+
+                <h3>
+
+                    İlk Projemiz
+
+                </h3>
+
+
+                <p>
+
+                    XLarge Studios'un
+                    ilk büyük oyun projesi.
+                    Çok yakında daha fazla
+                    bilgi paylaşacağız.
+
+                </p>
+
+
+                <span class="status">
+
+                    GELİŞTİRİLİYOR
+
+                </span>
+
+            </div>
+
         </div>
 
-        <div class="game-info">
-
-            <h3>
-                İlk Projemiz
-            </h3>
-
-            <p>
-                XLarge Studios'un ilk büyük oyun projesi.
-                Çok yakında daha fazla bilgi paylaşacağız.
-            </p>
-
-            <span class="status">
-                GELİŞTİRİLİYOR
-            </span>
-
-        </div>
-
-    </div>
 
 
-    <!-- OYUN 2 -->
+        <div class="game-card">
 
-    <div class="game-card">
+            <div class="game-image">
 
-        <div class="game-image">
-            YAKINDA
-        </div>
-
-        <div class="game-info">
-
-            <h3>
-                Proje X
-            </h3>
-
-            <p>
-                Yeni ve büyük bir oyun deneyimi
-                üzerinde çalışıyoruz.
-            </p>
-
-            <span class="status">
                 YAKINDA
-            </span>
+
+            </div>
+
+
+            <div class="game-info">
+
+                <h3>
+
+                    Proje X
+
+                </h3>
+
+
+                <p>
+
+                    Yeni ve büyük bir oyun
+                    deneyimi üzerinde
+                    çalışıyoruz.
+
+                </p>
+
+
+                <span class="status">
+
+                    YAKINDA
+
+                </span>
+
+            </div>
 
         </div>
+
+
+
+        <div class="game-card">
+
+            <div class="game-image">
+
+                YAKINDA
+
+            </div>
+
+
+            <div class="game-info">
+
+                <h3>
+
+                    Yeni Dünya
+
+                </h3>
+
+
+                <p>
+
+                    XLarge Studios'dan
+                    gelecek yeni bir
+                    macera.
+
+                </p>
+
+
+                <span class="status">
+
+                    PLANLANIYOR
+
+                </span>
+
+            </div>
+
+        </div>
+
 
     </div>
-
-
-    <!-- OYUN 3 -->
-
-    <div class="game-card">
-
-        <div class="game-image">
-            YAKINDA
-        </div>
-
-        <div class="game-info">
-
-            <h3>
-                Yeni Dünya
-            </h3>
-
-            <p>
-                XLarge Studios'dan gelecek
-                yeni bir macera.
-            </p>
-
-            <span class="status">
-                PLANLANIYOR
-            </span>
-
-        </div>
-
-    </div>
-
-</div>
 
 </section>
 
-<!-- GÜNCELLEMELER -->
+
+
+<!-- =========================
+     GÜNCELLEMELER
+========================= -->
 
 <section id="updates">
 
     <h2 class="section-title">
+
         Güncellemeler
+
     </h2>
 
+
     <p class="section-subtitle">
-        XLarge Studios'dan son gelişmeler.
+
+        XLarge Studios'dan
+        son gelişmeler.
+
     </p>
+
 
     <div class="updates">
 
+
         <div class="update-card">
 
             <div class="update-date">
+
                 2026
+
             </div>
+
 
             <div class="update-content">
 
                 <h3>
+
                     XLarge Studios Açıldı
+
                 </h3>
 
+
                 <p>
-                    XLarge Studios resmi olarak kuruldu.
-                    Yeni oyun projelerimiz için
-                    çalışmalara başladık.
+
+                    XLarge Studios resmi olarak
+                    kuruldu. Yeni oyun projelerimiz
+                    için çalışmalara başladık.
+
                 </p>
 
             </div>
@@ -654,153 +1244,306 @@
         </div>
 
 
+
         <div class="update-card">
 
             <div class="update-date">
+
                 YAKINDA
+
             </div>
+
 
             <div class="update-content">
 
                 <h3>
+
                     İlk Projenin Geliştirilmesi
+
                 </h3>
 
+
                 <p>
+
                     İlk büyük oyun projemizin
                     geliştirme süreci devam ediyor.
+
                 </p>
 
             </div>
 
         </div>
+
 
 
         <div class="update-card">
 
             <div class="update-date">
+
                 YAKINDA
+
             </div>
+
 
             <div class="update-content">
 
                 <h3>
+
                     İlk Oynanış Görüntüleri
+
                 </h3>
 
+
                 <p>
+
                     Oyunumuzdan ilk görüntüleri
                     sizlerle paylaşacağız.
+
                 </p>
 
             </div>
 
         </div>
+
 
     </div>
 
 </section>
-    <!-- TOPLULUK -->
 
-<section id="community">
+
+
+<!-- =========================
+     TOPLULUK
+========================= -->
+
+<section id="community" class="community">
 
     <h2 class="section-title">
+
         Topluluğumuza Katıl
+
     </h2>
 
+
     <p class="section-subtitle">
+
         XLarge Studios gelişmelerini takip et,
         oyunlarımızı keşfet ve topluluğumuza katıl.
+
     </p>
+
 
     <div class="community-box">
 
+
         <div class="community-item">
 
             <div class="community-icon">
+
                 🎮
+
             </div>
 
+
             <h3>
+
                 Roblox
+
             </h3>
 
+
             <p>
-                Oyunlarımızı Roblox üzerinde keşfet.
+
+                Oyunlarımızı Roblox üzerinde
+                keşfet ve deneyimle.
+
             </p>
 
-            <a href="#" class="button secondary">
+
+            <a
+                href="#"
+                class="button secondary">
+
                 Yakında
+
             </a>
 
         </div>
+
 
 
         <div class="community-item">
 
             <div class="community-icon">
+
                 💬
+
             </div>
 
+
             <h3>
+
                 Discord
+
             </h3>
 
+
             <p>
-                Oyuncularla birlikte topluluğumuza katıl.
+
+                Oyuncularla birlikte
+                topluluğumuza katıl.
+
             </p>
 
-            <a href="#" class="button secondary">
+
+            <a
+                href="#"
+                class="button secondary">
+
                 Yakında
+
             </a>
 
         </div>
+
 
     </div>
 
 </section>
-<!-- HAKKIMIZDA -->
+
+
+
+<!-- =========================
+     HAKKIMIZDA
+========================= -->
 
 <section id="about" class="about">
 
-    <div class="about-box">
+    <div class="about-container">
 
-        <h2 class="section-title">
-            XLarge Studios Hakkında
-        </h2>
 
-        <p>
-            XLarge Studios, özgün, kaliteli ve
-            unutulmaz oyun deneyimleri oluşturmayı
-            hedefleyen bağımsız bir oyun stüdyosudur.
-        </p>
+        <div class="about-text">
 
-        <br>
+            <div class="small-title">
 
-        <p>
-            Bizce oyunlar yalnızca oynanan şeyler
-            değildir. İnsanların hatırladığı,
-            paylaştığı ve tekrar tekrar dönmek
-            istediği deneyimler olmalıdır.
-        </p>
+                XLARGE STUDIOS
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                Daha Büyük Hayaller.
+
+            </h2>
+
+
+            <p>
+
+                XLarge Studios, oyunculara
+                unutulmaz deneyimler sunmak
+                amacıyla kurulmuş bağımsız
+                bir oyun stüdyosudur.
+
+            </p>
+
+
+            <p>
+
+                Amacımız sadece oyun yapmak değil;
+                insanların arkadaşlarıyla birlikte
+                keyifli vakit geçirebileceği,
+                keşfedebileceği ve hatırlayabileceği
+                dünyalar oluşturmak.
+
+            </p>
+
+
+            <p>
+
+                Küçük bir ekip olarak başladık.
+                Ancak hedefimiz büyük.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="about-stats">
+
+
+            <div class="stat-card">
+
+                <strong>
+                    01
+                </strong>
+
+                <span>
+                    Stüdyo
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <strong>
+                    ∞
+                </strong>
+
+                <span>
+                    Fikir
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <strong>
+                    XL
+                </strong>
+
+                <span>
+                    Hedef
+                </span>
+
+            </div>
+
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- ALT KISIM -->
+
+<!-- =========================
+     ALT KISIM
+========================= -->
 
 <footer>
 
-    © 2026 XLarge Studios
+    <strong>
+        XLARGE STUDIOS
+    </strong>
 
     <br><br>
 
-    Daha Büyük Düşün. Sınırların Ötesinde Oyna.
+    Daha Büyük Düşün.
+    Sınırların Ötesinde Oyna.
+
+    <br><br>
+
+    © 2026 XLarge Studios.
+    Tüm hakları saklıdır.
 
 </footer>
 
 
+
 </body>
+
 </html>
