@@ -419,7 +419,45 @@
     color: #777;
     line-height: 1.6;
 }     
-        
+    /* TOPLULUK */
+
+.community-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 800px;
+}
+
+.community-item {
+    background: #121219;
+    border: 1px solid #252532;
+    border-radius: 15px;
+    padding: 35px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.community-item:hover {
+    transform: translateY(-6px);
+    border-color: #6855ff;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+.community-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.community-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.community-item p {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}    
     </style>
 </head>
 
@@ -431,9 +469,10 @@
         XLARGE <span>STUDIOS</span>
     </div>
 
-  <nav>
+<nav>
     <a href="#games">Oyunlar</a>
     <a href="#updates">Güncellemeler</a>
+    <a href="#community">Topluluk</a>
     <a href="#about">Hakkımızda</a>
 </nav>
 
@@ -655,6 +694,65 @@
                 </p>
 
             </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- TOPLULUK -->
+
+<section id="community">
+
+    <h2 class="section-title">
+        Topluluğumuza Katıl
+    </h2>
+
+    <p class="section-subtitle">
+        XLarge Studios gelişmelerini takip et,
+        oyunlarımızı keşfet ve topluluğumuza katıl.
+    </p>
+
+    <div class="community-box">
+
+        <div class="community-item">
+
+            <div class="community-icon">
+                🎮
+            </div>
+
+            <h3>
+                Roblox
+            </h3>
+
+            <p>
+                Oyunlarımızı Roblox üzerinde keşfet.
+            </p>
+
+            <a href="#" class="button secondary">
+                Yakında
+            </a>
+
+        </div>
+
+
+        <div class="community-item">
+
+            <div class="community-icon">
+                💬
+            </div>
+
+            <h3>
+                Discord
+            </h3>
+
+            <p>
+                Oyuncularla birlikte topluluğumuza katıl.
+            </p>
+
+            <a href="#" class="button secondary">
+                Yakında
+            </a>
 
         </div>
 
