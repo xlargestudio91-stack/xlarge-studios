@@ -24,7 +24,7 @@
             overflow-x: hidden;
         }
 
-        /* NAVBAR */
+        /* ÜST MENÜ */
 
         header {
             position: fixed;
@@ -69,7 +69,7 @@
             color: white;
         }
 
-        /* HERO */
+        /* ANA SAYFA */
 
         .hero {
             min-height: 100vh;
@@ -86,7 +86,12 @@
             overflow: hidden;
 
             background:
-                radial-gradient(circle at 50% 35%, #30256b 0%, #111126 25%, #08080c 65%);
+                radial-gradient(
+                    circle at 50% 35%,
+                    #30256b 0%,
+                    #111126 25%,
+                    #08080c 65%
+                );
         }
 
         .hero::before {
@@ -132,7 +137,11 @@
 
             line-height: 0.9;
 
-            background: linear-gradient(90deg, #ffffff, #9b8cff);
+            background: linear-gradient(
+                90deg,
+                #ffffff,
+                #9b8cff
+            );
 
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -160,7 +169,7 @@
             line-height: 1.7;
         }
 
-        /* BUTTON */
+        /* BUTONLAR */
 
         .buttons {
             margin-top: 35px;
@@ -185,7 +194,9 @@
         .primary {
             background: #6855ff;
             color: white;
-            box-shadow: 0 0 25px rgba(104,85,255,0.25);
+
+            box-shadow:
+                0 0 25px rgba(104,85,255,0.25);
         }
 
         .primary:hover {
@@ -195,7 +206,9 @@
 
         .secondary {
             border: 1px solid #333344;
+
             color: #ddd;
+
             background: rgba(255,255,255,0.03);
         }
 
@@ -204,7 +217,7 @@
             transform: translateY(-3px);
         }
 
-        /* SECTIONS */
+        /* BÖLÜMLER */
 
         section {
             padding: 100px 7%;
@@ -220,7 +233,7 @@
             margin-bottom: 40px;
         }
 
-        /* GAMES */
+        /* OYUNLAR */
 
         .games {
             display: grid;
@@ -306,7 +319,7 @@
             font-size: 12px;
         }
 
-        /* ABOUT */
+        /* HAKKIMIZDA */
 
         .about {
             background: #0d0d13;
@@ -324,7 +337,7 @@
             line-height: 1.8;
         }
 
-        /* FOOTER */
+        /* ALT KISIM */
 
         footer {
             padding: 35px 7%;
@@ -336,7 +349,7 @@
             border-top: 1px solid #1e1e27;
         }
 
-        /* MOBILE */
+        /* TELEFON */
 
         @media (max-width: 700px) {
 
@@ -378,14 +391,14 @@
     </div>
 
     <nav>
-        <a href="#games">Games</a>
-        <a href="#about">About</a>
+        <a href="#games">Oyunlar</a>
+        <a href="#about">Hakkımızda</a>
     </nav>
 
 </header>
 
 
-<!-- HERO -->
+<!-- ANA SAYFA -->
 
 <section class="hero">
 
@@ -397,21 +410,22 @@
 
         <h1>XLARGE</h1>
 
-        <h2>Think Bigger. Play Beyond.</h2>
+        <h2>Daha Büyük Düşün. Sınırların Ötesinde Oyna.</h2>
 
         <p>
-            We create ambitious games and experiences
-            designed to bring players together.
+            Oyuncuları bir araya getiren,
+            özgün ve unutulmaz oyun deneyimleri
+            oluşturuyoruz.
         </p>
 
         <div class="buttons">
 
             <a href="#games" class="button primary">
-                Explore Games
+                Oyunları Keşfet
             </a>
 
             <a href="#about" class="button secondary">
-                About Us
+                Bizi Tanıyın
             </a>
 
         </div>
@@ -421,16 +435,16 @@
 </section>
 
 
-<!-- GAMES -->
+<!-- OYUNLAR -->
 
 <section id="games">
 
     <h2 class="section-title">
-        Our Games
+        Oyunlarımız
     </h2>
 
     <p class="section-subtitle">
-        Something big is coming.
+        Büyük projeler yolda.
     </p>
 
     <div class="games">
@@ -438,22 +452,22 @@
         <div class="game-card">
 
             <div class="game-image">
-                COMING SOON
+                YAKINDA
             </div>
 
             <div class="game-info">
 
                 <h3>
-                    Our First Game
+                    İlk Oyunumuz
                 </h3>
 
                 <p>
-                    Our first major project is currently
-                    in development.
+                    İlk büyük projemiz şu anda
+                    geliştiriliyor.
                 </p>
 
                 <span class="status">
-                    IN DEVELOPMENT
+                    GELİŞTİRİLİYOR
                 </span>
 
             </div>
@@ -465,28 +479,29 @@
 </section>
 
 
-<!-- ABOUT -->
+<!-- HAKKIMIZDA -->
 
 <section id="about" class="about">
 
     <div class="about-box">
 
         <h2 class="section-title">
-            About XLarge Studios
+            XLarge Studios Hakkında
         </h2>
 
         <p>
-            XLarge Studios is an independent game studio
-            focused on creating unique, memorable and
-            ambitious gaming experiences.
+            XLarge Studios, özgün, kaliteli ve
+            unutulmaz oyun deneyimleri oluşturmayı
+            hedefleyen bağımsız bir oyun stüdyosudur.
         </p>
 
         <br>
 
         <p>
-            We believe games should be more than just
-            something you play. They should be something
-            you remember.
+            Bizce oyunlar yalnızca oynanan şeyler
+            değildir. İnsanların hatırladığı,
+            paylaştığı ve tekrar tekrar dönmek
+            istediği deneyimler olmalıdır.
         </p>
 
     </div>
@@ -494,7 +509,7 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- ALT KISIM -->
 
 <footer>
 
@@ -502,7 +517,7 @@
 
     <br><br>
 
-    Think Bigger. Play Beyond.
+    Daha Büyük Düşün. Sınırların Ötesinde Oyna.
 
 </footer>
 
