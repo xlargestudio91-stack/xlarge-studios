@@ -6,6 +6,9 @@
     <title>XLarge Studios | Oyunun Ötesinde</title>
     <meta name="description" content="XLarge Studios - Roblox üzerinde yeni nesil oyun deneyimleri ve içerikler.">
     
+    <!-- TARAYICI SEKMESİ LOGO (FAVICON) -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
     <!-- FontAwesome İkon Seti -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
@@ -132,12 +135,21 @@
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 900;
             letter-spacing: 2px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 15px var(--primary-glow);
         }
 
         .logo span {
@@ -583,6 +595,7 @@
     <!-- ÜST MENÜ (NAVBAR) -->
     <header>
         <div class="logo">
+            <img src="logo.png" alt="XLarge Studios Logo">
             XLARGE <span>STUDIOS</span>
         </div>
 
@@ -744,6 +757,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="logo" style="justify-content:center;">
+            <img src="logo.png" alt="XLarge Studios Logo">
             XLARGE <span>STUDIOS</span>
         </div>
 
